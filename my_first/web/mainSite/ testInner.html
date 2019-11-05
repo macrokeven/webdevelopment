@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script>
+	function ckA(id){
+		var btnId = "bt" +id;
+		var inptId = "ip" + id;
+		var btn = document.getElementById(btnId);
+		var inputE = document.getElementById(inptId);
+		btn.innerHTML ="<a href='javascript:void(0)' onClick='sub(this.id)' id ='"+id+"'>提交</a>";
+		inputE.innerHTML = "<input type='text' id = 'k"+id+"'>";
+	}
+	function sub(id){
+		realId = "k" + id;
+		var val =  document.getElementById(realId).value;
+		alert(val);
+	}
+</script>
+</head>
+
+<body>
+	<div id ="bt1">
+	<a href="javascript:void(0);" onclick="ckA(this.id)" id ='1'>修改</a>
+	</div>
+	<div id ="ip1">
+		<td>good</td>
+	</div>
+</body>
+</html>
